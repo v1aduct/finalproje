@@ -116,3 +116,13 @@ def uzmanlik_gruplandir(df):
 
 uzmanlik_gruplandir(birlesik_df)
 
+print("\n\n 5 Yildan uzun deneyimi olan doktorlar: \n")
+
+def deneyim_gruplandir(df):
+    
+    deneyim_df = df[df['Deneyim Yili'] > 5]
+    
+    print(deneyim_df)
+
+deneyim_gruplandir(birlesik_df)
+
