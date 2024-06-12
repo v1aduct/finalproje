@@ -32,7 +32,27 @@ class Hasta:
     def set_tedavi(self, girdi):
         self._tedavi = girdi
 
+    def tedavi_suresi_hesapla(self):
+        tedavi_sureleri = {
+            "Gribal Enfeksiyon": 7,
+            "Bronşit": 14,
+            "Pnömoni": 21,
+            "Migren": 10,
+            "Hipertansiyon": 30,
+            "Diyabet": 30,
+            "Kanser": 180,
+            "Kalp Hastalığı": 90,
+            "Astım": 30,
+            "Mide Ülseri": 14
+        }
+        return tedavi_sureleri.get(self._hastalik, 10)
 
     def __str__(self):
         return (f"Ad: {self._ad}, Soyad: {self._soyad}, Hasta No: {self._hasta_no}, "
                 f"Dogum Tarihi: {self._dogum_tarihi}, Hastalik: {self._hastalik}, Tedavi: {self._tedavi}")
+    
+    
+hasta = Hasta(hasta_no=1001, ad="Mehmet", soyad="Kaya", dogum_tarihi="01-01-1980", hastalik="Gribal Enfeksiyon", tedavi="İlaç Tedavisi")
+
+print(hasta)
+print(f"Tedavi Süresi: {hasta.tedavi_suresi_hesapla()} gün")
