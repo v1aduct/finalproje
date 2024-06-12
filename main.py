@@ -126,3 +126,14 @@ def deneyim_gruplandir(df):
 
 deneyim_gruplandir(birlesik_df)
 
+print("\n\n 1990'dan sonra dogan hastalar: \n")
+
+dogum_filtrelenmis_satirlar = hasta_df[hasta_df['Dogum Tarihi'] > '1990']
+print(dogum_filtrelenmis_satirlar)
+
+print("\n\n Siralanmis hasta dataframe: \n")
+
+siralanmis_df = hasta_df.sort_values(by='Ad')
+
+print(siralanmis_df)
+
