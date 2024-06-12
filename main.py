@@ -142,4 +142,7 @@ print("\n\n 7000tl ustu maasi olan personeller: \n")
 maas_filtrelenmis_satirlar = personel_df[personel_df['Maas'] > 7000]
 print(maas_filtrelenmis_satirlar)
 
+print("\n\n Yeni dataframe: \n")
 
+yeni_df = birlesik_df.loc[:, ['Ad', 'Soyad', 'Departman', 'Maas', 'Uzmanlik', 'Deneyim Yili', 'Hastalik', 'Tedavi']]
+print(yeni_df)
