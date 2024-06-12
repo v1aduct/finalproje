@@ -42,7 +42,7 @@ print(hasta1)
 print(hasta2)
 print(hasta3)
 
-print("\n\n")
+
 
 personel_data = {
     "Ad": ["Ali", "Ayse"],
@@ -91,10 +91,28 @@ hemsire_df = pd.DataFrame(hemsire_data)
 hasta_df = pd.DataFrame(hasta_data)
 
 
-combined_df = pd.concat([personel_df, doktor_df, hemsire_df, hasta_df])
+birlesik_df = pd.concat([personel_df, doktor_df, hemsire_df, hasta_df])
 
 
-combined_df.reset_index(drop=True, inplace=True)
+birlesik_df.reset_index(drop=True, inplace=True)
 
+birlesik_df = birlesik_df.fillna(0)
 
-print(combined_df.fillna(0))
+print("\n\n")
+
+print(birlesik_df)
+
+print("\n\n")
+
+def uzmanlik_gruplandir(df):
+    # Group instances of the Doktor class by 'uzmanlik' variable
+    gruplandirilmis_df = df.groupby('Uzmanlik')
+    
+    # Iterate over each group and print their respective counts
+    for uzmanlik, grup in gruplandirilmis_df:
+        count = grup.shape[0]  # Get the number of rows in each group
+        if uzmanlik != 0:
+            print(f"Uzmanlik: {uzmanlik}, Sayi: {count}")
+
+uzmanlik_gruplandir(birlesik_df)
+
