@@ -15,6 +15,9 @@ class Hemsire(personel.Personel):
     def set_sertifika(self, value):
         self._sertifika = value
 
+    def maas_arttir(self,oran):
+        self._maas = self._maas * (1+oran)
+
 
     def __str__(self):
         return (f"Ad: {self._ad}, Soyad: {self._soyad}, Personel No: {self._personel_no}, "
