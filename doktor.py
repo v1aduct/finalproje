@@ -19,3 +19,12 @@ class Doktor(personel.Personel):
         self._deneyim_yili = girdi
     def set_hastane(self, girdi):
         self._hastane = girdi
+
+    def maas_arttir(self,oran):
+        self._maas = self._maas * (1+oran)
+    
+    def __str__(self):
+        return (f"Ad: {self._ad}, Soyad: {self._soyad}, Personel No: {self._personel_no}, "
+                f"Departman: {self._departman}, Maas: {self._maas}, Uzmanlik: {self._uzmanlik}, "
+                f"Deneyim Yili: {self._deneyim_yili}, Hastane: {self._hastane}")
+
