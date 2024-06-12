@@ -137,3 +137,9 @@ siralanmis_df = hasta_df.sort_values(by='Ad')
 
 print(siralanmis_df)
 
+print("\n\n 7000tl ustu maasi olan personeller: \n")
+
+maas_filtrelenmis_satirlar = personel_df[personel_df['Maas'] > 7000]
+print(maas_filtrelenmis_satirlar)
+
+
