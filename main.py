@@ -105,12 +105,10 @@ print(birlesik_df)
 print("\n\n")
 
 def uzmanlik_gruplandir(df):
-    # Group instances of the Doktor class by 'uzmanlik' variable
     gruplandirilmis_df = df.groupby('Uzmanlik')
     
-    # Iterate over each group and print their respective counts
     for uzmanlik, grup in gruplandirilmis_df:
-        count = grup.shape[0]  # Get the number of rows in each group
+        count = grup.shape[0]
         if uzmanlik != 0:
             print(f"Uzmanlik: {uzmanlik}, Sayi: {count}")
 
