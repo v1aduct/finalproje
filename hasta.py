@@ -52,7 +52,3 @@ class Hasta:
                 f"Dogum Tarihi: {self._dogum_tarihi}, Hastalik: {self._hastalik}, Tedavi: {self._tedavi}")
     
     
-hasta = Hasta(hasta_no=1001, ad="Mehmet", soyad="Kaya", dogum_tarihi="01-01-1980", hastalik="Gribal Enfeksiyon", tedavi="İlaç Tedavisi")
-
-print(hasta)
-print(f"Tedavi Süresi: {hasta.tedavi_suresi_hesapla()} gün")
